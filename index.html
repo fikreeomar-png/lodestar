@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lodestar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a calm, confident morning paper for one reader; few hues, sharp detail.
+   IDEA: a coastal daymark, the striped beacon sailors steer by in daylight; the brief is your fix for the day.
+   PICTURE: striped beacon on a headland at sunrise over a sea field, in the masthead band.
+   COLOUR and TYPE: deep sea field, white page, signal red accent; Archivo for heads and UI, Source Serif 4 for reading.
+   LAYOUT: sea masthead with date rail, Top 3 cards, sticky section chips, story column, hanging watch list. */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#0c1316);--ink:light-dark(#0f1a1e,#e8eef0);--mute:light-dark(#55656b,#9aaab0);
+--line:light-dark(#e2e8ea,#1f2b30);--sea:light-dark(#0e4a59,#0a2a33);--sea2:light-dark(#0b3d4a,#07222a);
+--tint:light-dark(#eaf3f5,#122228);--red:#e5372b;--card:light-dark(#ffffff,#111b1f)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Serif 4",Georgia,serif;overflow-x:clip}
+h1,h2,h3,.ui{font-family:Archivo,system-ui,sans-serif}
+a{color:inherit}
+.band{padding:clamp(28px,4vw,64px) max(5vw,16px)}
+.wrap{max-width:1240px;margin:0 auto}
+.scroll{overflow-x:auto}.scroll a,.scroll button{flex:none}
+html{scroll-padding-top:72px}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+/* masthead */
+.mast{background:linear-gradient(180deg,var(--sea) 0%,var(--sea2) 100%);color:#f2f7f8;padding-bottom:20px}
+.mgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(16px,3vw,40px);align-items:end}
+.brand{font:800 clamp(44px,7vw,76px)/1 Archivo,sans-serif;letter-spacing:-.02em;margin:0}
+.brand i{font-style:normal;color:var(--red)}
+.dateline{font:700 clamp(22px,2.6vw,32px)/1.15 Archivo,sans-serif;margin:18px 0 6px;text-wrap:balance}
+.meta{font:500 15px/1.4 Archivo,sans-serif;color:#b9d3d9;margin:0}
+.art{position:relative;height:clamp(200px,26vw,300px)}
+.art svg{position:absolute;inset:0;width:100%;height:100%}
+.rail{display:flex;gap:8px;margin-top:22px;padding-bottom:4px;scroll-snap-type:x mandatory}
+.rail button{scroll-snap-align:start;min-height:44px;padding:6px 14px;border-radius:999px;border:1px solid #3d7381;background:transparent;color:#e6f1f3;font:500 15px/1.2 Archivo,sans-serif;white-space:nowrap}
+.rail button[aria-current=true]{background:#f2f7f8;color:#0b3d4a;border-color:#f2f7f8}
+.railnav{display:flex;gap:8px;align-items:center}
+.railnav .arrow{flex:none;width:44px;height:44px;border-radius:50%;border:1px solid #3d7381;background:transparent;color:#fff;font:700 18px Archivo}
+
+/* top 3 */
+.top{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:-6px}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px}
+.tcard:first-child{background:var(--tint);border-color:transparent}
+.tag{font:700 13px/1 Archivo,sans-serif;color:var(--red)}
+.tcard h3{font-size:22px;line-height:1.15;margin:0;text-wrap:balance}
+.tcard p{margin:0;font-size:16px}
+.h2{font:800 clamp(28px,3.4vw,40px)/1.05 Archivo,sans-serif;margin:0 0 18px;text-wrap:balance}
+
+/* toolbar */
+.bar{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:10px max(5vw,16px)}
+.barin{max-width:1240px;margin:0 auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.chips{display:flex;gap:8px;flex:1 1 420px}
+.chip{min-height:40px;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 15px/1.2 Archivo,sans-serif;white-space:nowrap}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.search{flex:0 1 260px;min-height:44px;font:16px Archivo,sans-serif;padding:8px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);width:100%}
+
+/* stories */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:clamp(24px,4vw,56px);align-items:start}
+.sec{margin-bottom:40px}
+.sec h2{font:800 26px/1.1 Archivo,sans-serif;margin:0 0 6px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.story{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:8px 14px}
+.story h3{font-size:21px;line-height:1.2;margin:0;text-wrap:balance}
+.story .body{grid-column:1/-1;margin:0}
+.why{grid-column:1/-1;margin:4px 0 0;padding:12px 14px;background:var(--tint);border-radius:10px;font-size:16px}
+.why b{font:700 14px Archivo,sans-serif;color:var(--red);margin-right:6px}
+.src{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;font:500 13px Archivo,sans-serif}
+.src a{padding:4px 10px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--mute)}
+.src a:hover{color:var(--ink);border-color:var(--ink)}
+.save{width:44px;height:44px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--mute);display:grid;place-items:center}
+.save[aria-pressed=true]{color:var(--red);border-color:var(--red)}
+.save svg{width:20px;height:20px}
+
+aside{position:sticky;top:76px}
+.watch{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.watch h2{font:800 22px/1.1 Archivo,sans-serif;margin:0 0 12px}
+.wl{list-style:none;margin:0;padding:0}
+.wl li{display:grid;grid-template-columns:5.2em minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.45}
+.wl time{font:700 14px/1.4 Archivo,sans-serif;color:var(--red);white-space:nowrap}
+.note{font:500 13px/1.5 Archivo,sans-serif;color:var(--mute);margin-top:14px}
+
+.empty{max-width:640px;padding:40px 0}
+.empty h2{font:800 30px/1.1 Archivo,sans-serif;margin:0 0 10px}
+.status{font:500 14px Archivo,sans-serif;color:var(--mute)}
+.hold{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.hold button{min-height:44px;padding:6px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:700 15px/1.1 Archivo,sans-serif;display:flex;gap:8px;align-items:center}
+.hold button small{font:500 12px Archivo,sans-serif;color:var(--mute)}
+.hold button[aria-pressed=true]{background:var(--sea);color:#fff;border-color:var(--sea)}
+.hold button[aria-pressed=true] small{color:#b9d3d9}
+.tks{display:flex;gap:6px;flex-wrap:wrap}
+.tk{font:700 12px/1 Archivo,sans-serif;padding:5px 8px;border-radius:6px;background:var(--sea);color:#fff}
+.pnote{font:500 13px/1.5 Archivo,sans-serif;color:var(--mute);margin:-6px 0 16px}
+mark{background:color-mix(in srgb,var(--red) 22%,transparent);color:inherit;border-radius:3px}
+footer{border-top:1px solid var(--line);font:500 14px/1.6 Archivo,sans-serif;color:var(--mute)}
+@keyframes rise{from{transform:translateY(14px)}to{transform:none}}
+.sun{animation:rise 2.4s ease-out both}
+@media (prefers-reduced-motion:reduce){.sun{animation:none}}
+@media(max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}aside{position:static}.top{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.mgrid{grid-template-columns:minmax(0,1fr)}.art{height:180px;order:-1}.railnav .arrow{display:none}.chips{flex-basis:100%;flex-wrap:nowrap;overflow-x:auto}.search{flex-basis:100%}.tcard h3{font-size:20px}}
+</style>
+</head>
+<body>
+<header class="mast band">
+  <div class="wrap">
+    <div class="mgrid">
+      <div>
+        <h1 class="brand">Lode<i>star</i></h1>
+        <p class="dateline" id="dateline">Your morning bearings</p>
+        <p class="meta" id="meta">Bloomberg · Financial Times · WSJ · Al Jazeera</p>
+      </div>
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMax slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0e4a59" stop-opacity="0"/><stop offset="1" stop-color="#f7a072" stop-opacity=".35"/></linearGradient>
+            <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d5a6b"/><stop offset="1" stop-color="#07303a"/></linearGradient>
+            <clipPath id="tri"><path d="M250 34 L292 120 L208 120 Z"/></clipPath>
+          </defs>
+          <rect width="400" height="190" fill="url(#sky)"/>
+          <g class="sun"><circle cx="110" cy="190" r="46" fill="#ffc98b"/><circle cx="110" cy="190" r="64" fill="#ffc98b" opacity=".18"/></g>
+          <rect y="186" width="400" height="74" fill="url(#sea)"/>
+          <g stroke="#7fb3bf" stroke-width="2" stroke-linecap="round" opacity=".55">
+            <path d="M30 206h46M96 214h30M60 228h60M150 210h24M20 244h50M140 240h40"/>
+          </g>
+          <path d="M70 196h80" stroke="#ffd7a8" stroke-width="3" opacity=".6" stroke-linecap="round"/>
+          <path d="M175 260 C190 200 222 182 262 178 C306 174 336 196 360 218 C378 234 392 250 400 260 Z" fill="#06252d"/>
+          <path d="M200 260 C214 214 236 196 262 192 C296 188 322 204 344 224 L360 260 Z" fill="#0a3640"/>
+          <rect x="246" y="118" width="8" height="66" fill="#d9e6ea"/>
+          <rect x="250" y="118" width="4" height="66" fill="#9fb8bf"/>
+          <g clip-path="url(#tri)">
+            <rect x="200" y="30" width="100" height="92" fill="#f4f7f8"/>
+            <rect x="200" y="30" width="100" height="22" fill="#e5372b"/>
+            <rect x="200" y="74" width="100" height="22" fill="#e5372b"/>
+            <path d="M250 30 L300 122 L250 122Z" fill="#000" opacity=".14"/>
+          </g>
+          <path d="M250 34 L292 120 L208 120 Z" fill="none" stroke="#07303a" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+    <div class="railnav">
+      <button class="arrow" id="prev" aria-label="Earlier brief">‹</button>
+      <div class="rail scroll" id="rail" role="tablist" aria-label="Past briefs"></div>
+      <button class="arrow" id="next" aria-label="Later brief">›</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="band" id="topband" hidden>
+    <div class="wrap">
+      <h2 class="h2">Top 3 today</h2>
+      <div class="top" id="top"></div>
+    </div>
+  </section>
+
+  <div class="bar" id="bar" hidden>
+    <div class="barin">
+      <div class="chips scroll" id="chips" role="group" aria-label="Sections"></div>
+      <input class="search" id="q" type="search" placeholder="Search all briefs" aria-label="Search all briefs" autocomplete="off">
+    </div>
+  </div>
+
+  <section class="band">
+    <div class="wrap">
+      <div id="emptyState" class="empty">
+        <h2>Loading your brief…</h2>
+        <p class="status" id="status">Connecting to Lodestar.</p>
+      </div>
+      <div class="layout" id="layout" hidden>
+        <div id="stories"></div>
+        <aside>
+          <div class="watch">
+            <h2>What to watch</h2>
+            <ul class="wl" id="watch"></ul>
+            <p class="note" id="gen"></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="band"><div class="wrap">A new brief lands every morning at 7:43 Qatar time. Bloomberg, FT and WSJ are paywalled, so their stories are written from headlines and summaries; follow the source links for the full articles.</div></footer>
+
+<script>
+{
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl = u => typeof u === 'string' && u.startsWith('https://') ? u : '';
+const store = {
+  get(k, d){ try { return JSON.parse(localStorage.getItem(k)) ?? d } catch { return d } },
+  set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)) } catch {} }
+};
+const SECTIONS = [['all','All'],['portfolio','Portfolio'],['markets','Markets'],['energy','Energy'],['geopolitics','Geopolitics'],['business','Business & Tech'],['gulf','Gulf'],['saved','Saved']];
+let briefs = [], current = null, section = store.get('dm.section','all'), query = '';
+let saved = store.get('dm.saved', {});
+let holdings = [], tick = 'all';
+const bookmark = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>';
+const bookmarkO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>';
+
+const fmtDate = (iso, opts) => { const d = new Date(iso + 'T12:00:00'); return isNaN(d) ? iso : d.toLocaleDateString('en-GB', opts) };
+const keyOf = (date, h) => date + '|' + h;
+const hl = s => { const t = esc(s); if (!query) return t; const q = esc(query).replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); return t.replace(new RegExp(q,'gi'), m => '<mark>' + m + '</mark>') };
+
+function sources(list){
+  return (Array.isArray(list) ? list : []).map(s => { const u = safeUrl(s.url); return u ? `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(s.name)} ↗</a>` : `<span>${esc(s.name)}</span>` }).join('');
+}
+function storyHTML(st, date, secName){
+  const k = keyOf(date, st.headline), on = !!saved[k];
+  return `<article class="story">
+    <div>${Array.isArray(st.tickers) && st.tickers.length ? `<div class="tks" style="margin-bottom:8px">${st.tickers.map(t => `<span class="tk">${esc(t)}</span>`).join('')}</div>` : ''}<h3>${hl(st.headline)}</h3></div>
+    <button class="save" data-k="${esc(k)}" aria-pressed="${on}" aria-label="${on ? 'Remove from saved' : 'Save story'}">${on ? bookmark : bookmarkO}</button>
+    ${secName ? `<div class="tag" style="grid-column:1/-1">${esc(secName)} · ${esc(fmtDate(date,{day:'numeric',month:'short'}))}</div>` : ''}
+    <p class="body">${hl(st.body)}</p>
+    ${st.why ? `<p class="why"><b>Why it matters</b>${hl(st.why)}</p>` : ''}
+    <div class="src">${sources(st.sources)}</div>
+  </article>`;
+}
+
+function renderRail(){
+  $('rail').innerHTML = briefs.map(b => `<button role="tab" data-d="${esc(b.date)}" aria-current="${current && b.date === current.date}">${esc(fmtDate(b.date,{weekday:'short',day:'numeric',month:'short'}))}</button>`).join('');
+  const a = $('rail').querySelector('[aria-current=true]'); if (a) a.scrollIntoView({block:'nearest',inline:'nearest'});
+}
+function renderChips(){
+  $('chips').innerHTML = SECTIONS.map(([k,n]) => `<button class="chip" data-s="${k}" aria-pressed="${section===k}">${n}${k==='saved' ? ' (' + Object.keys(saved).length + ')' : ''}</button>`).join('');
+}
+function render(){
+  const has = briefs.length > 0;
+  $('emptyState').hidden = has; $('layout').hidden = !has; $('bar').hidden = !has;
+  if (!has) return;
+  const b = current;
+  const nStories = (b.sections||[]).reduce((n,s) => n + (s.stories||[]).length, 0);
+  $('dateline').textContent = fmtDate(b.date,{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  $('meta').textContent = `${nStories} stories · about ${b.readMinutes || Math.max(3, Math.round(nStories*0.8))} min read`;
+  renderRail(); renderChips();
+
+  const browsing = !query && section !== 'saved';
+  $('topband').hidden = !(browsing && section === 'all' && (b.top||[]).length);
+  $('top').innerHTML = (b.top||[]).slice(0,3).map(t => `<div class="tcard"><span class="tag">${esc(t.section || 'Top story')}</span><h3>${esc(t.headline)}</h3><p>${esc(t.summary)}</p><div class="src">${sources(t.sources)}</div></div>`).join('');
+
+  let html = '';
+  if (query || section === 'saved') {
+    const q = query.toLowerCase(), hits = [];
+    for (const br of briefs) for (const s of [...(br.sections||[]), ...(br.portfolio ? [{name:'Portfolio', ...br.portfolio}] : [])]) for (const st of (s.stories||[])) {
+      const txt = (st.headline + ' ' + st.body + ' ' + (st.why||'')).toLowerCase();
+      if (section === 'saved' && !saved[keyOf(br.date, st.headline)]) continue;
+      if (q && !txt.includes(q)) continue;
+      hits.push(storyHTML(st, br.date, s.name));
+    }
+    const title = section === 'saved' ? 'Saved stories' : `Results for “${esc(query)}”`;
+    html = `<div class="sec"><h2>${title}</h2>${hits.join('') || `<p class="status">${section==='saved' ? 'Tap the bookmark on any story to keep it here.' : 'No stories match across your briefs.'}</p>`}</div>`;
+  } else if (section === 'portfolio') {
+    const ps = (b.portfolio && Array.isArray(b.portfolio.stories)) ? b.portfolio : (b.sections||[]).find(s => s.key === 'portfolio');
+    const stories = ps ? (ps.stories||[]) : [];
+    const count = sym => stories.filter(st => (st.tickers||[]).includes(sym)).length;
+    const syms = holdings.length ? holdings : [...new Set(stories.flatMap(st => st.tickers||[]))].map(s => ({symbol:s}));
+    const bar = `<div class="hold" id="hold" role="group" aria-label="Holdings"><button data-t="all" aria-pressed="${tick==='all'}">All holdings <small>${stories.length}</small></button>${syms.map(h => `<button data-t="${esc(h.symbol)}" aria-pressed="${tick===h.symbol}">${esc(h.symbol)} <small>${count(h.symbol)}</small></button>`).join('')}</div>`;
+    const shown = stories.filter(st => tick === 'all' || (st.tickers||[]).includes(tick));
+    html = `<div class="sec"><h2>${esc(ps ? ps.name : 'My Portfolio')}</h2><p class="pnote">News on your holdings. Not investment advice.</p>${bar}${shown.map(st => storyHTML(st, b.date)).join('') || `<p class="status">${ps ? 'No news on this holding today.' : 'No portfolio news in this brief.'}</p>`}</div>`;
+  } else {
+    html = (b.sections||[]).filter(s => section === 'all' || s.key === section).map(s =>
+      `<div class="sec" id="sec-${esc(s.key)}"><h2>${esc(s.name)}</h2>${(s.stories||[]).map(st => storyHTML(st, b.date)).join('')}</div>`).join('')
+      || '<p class="status">Nothing in this section today.</p>';
+  }
+  $('stories').innerHTML = html;
+  $('watch').innerHTML = (b.watch||[]).map(w => `<li><time>${esc(w.when)}</time><span>${esc(w.what)}</span></li>`).join('') || '<li><span>No events flagged.</span></li>';
+  $('gen').textContent = b.generatedAt ? 'Compiled ' + new Date(b.generatedAt).toLocaleString('en-GB',{hour:'2-digit',minute:'2-digit',day:'numeric',month:'short'}) : '';
+}
+
+function pick(date){
+  current = briefs.find(b => b.date === date) || briefs[0] || null;
+  if (current && location.hash.slice(1) !== current.date) history.replaceState(null,'','#' + current.date);
+  render();
+}
+
+$('rail').addEventListener('click', e => { const t = e.target.closest('button'); if (t) { pick(t.dataset.d); window.scrollTo({top:0,behavior:'smooth'}) } });
+$('prev').addEventListener('click', () => { const i = briefs.indexOf(current); if (i < briefs.length-1) pick(briefs[i+1].date) });
+$('next').addEventListener('click', () => { const i = briefs.indexOf(current); if (i > 0) pick(briefs[i-1].date) });
+document.addEventListener('keydown', e => { if (e.target.tagName === 'INPUT') return; if (e.key === 'ArrowLeft') $('prev').click(); if (e.key === 'ArrowRight') $('next').click() });
+$('chips').addEventListener('click', e => { const t = e.target.closest('button'); if (!t) return; section = t.dataset.s; store.set('dm.section', section); render() });
+let qt; $('q').addEventListener('input', e => { clearTimeout(qt); qt = setTimeout(() => { query = e.target.value.trim(); render() }, 180) });
+$('stories').addEventListener('click', e => {
+  const h = e.target.closest('#hold button'); if (h) { tick = h.dataset.t; render(); return }
+  const t = e.target.closest('.save'); if (!t) return;
+  const k = t.dataset.k; if (saved[k]) delete saved[k]; else saved[k] = 1;
+  store.set('dm.saved', saved); render();
+});
+window.addEventListener('hashchange', () => { const h = location.hash.slice(1); if (current && h !== current.date) pick(h) });
+
+const setStatus = (title, msg) => { $('emptyState').querySelector('h2').textContent = title; $('status').textContent = msg };
+const timer = setTimeout(() => { if (!briefs.length) setStatus('Still reaching your briefs…', 'Lodestar can’t reach its data yet. Check your connection; this page keeps trying.') }, 10000);
+
+(async () => {
+  const get = async u => { const r = await fetch(u, {cache:'no-cache'}); if (!r.ok) throw new Error(r.status); return r.json() };
+  try {
+    const p = await get('data/portfolio.json').catch(() => null);
+    holdings = p && Array.isArray(p.holdings) ? p.holdings.filter(x => x && typeof x.symbol === 'string') : [];
+    const idx = await get('data/briefs/index.json');
+    const dates = (Array.isArray(idx.dates) ? idx.dates : []).filter(d => /^\d{4}-\d{2}-\d{2}$/.test(d)).sort().reverse().slice(0, 90);
+    const loaded = await Promise.all(dates.map(d => get('data/briefs/' + d + '.json').then(b => ({ ...b, date: d })).catch(() => null)));
+    briefs = loaded.filter(Boolean);
+    clearTimeout(timer);
+    if (!briefs.length) { setStatus('Your first brief is on its way', 'Lodestar fills itself every morning at 7:43 Qatar time with what matters from Bloomberg, the FT, the WSJ and Al Jazeera.'); render(); return }
+    pick(location.hash.slice(1));
+  } catch (e) { clearTimeout(timer); setStatus('Lodestar couldn’t load', 'The brief files could not be read. Pull to refresh or try again shortly.') }
+})();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "holdings": [
+    {"symbol": "AVGO", "name": "Broadcom", "exchange": "NASDAQ"},
+    {"symbol": "NOW", "name": "ServiceNow", "exchange": "NYSE"},
+    {"symbol": "SPUS", "name": "SP Funds S&P 500 Sharia ETF", "exchange": "ARCA"},
+    {"symbol": "SHOP", "name": "Shopify", "exchange": "NASDAQ"},
+    {"symbol": "MSFT", "name": "Microsoft", "exchange": "NASDAQ"},
+    {"symbol": "AMD", "name": "AMD", "exchange": "NASDAQ"},
+    {"symbol": "GOOG", "name": "Alphabet (Class C)", "exchange": "NASDAQ"}
+  ]
+}
