@@ -1,0 +1,615 @@
+{
+ "date": "2026-11-24",
+ "generatedAt": "2026-11-24T09:31:25+03:00",
+ "readMinutes": 9,
+ "top": [
+  {
+   "headline": "Huang's return to Nvidia sparks Wall Street's best day since April 2025",
+   "summary": "Nvidia's board unanimously reinstated Jensen Huang as CEO after input from the US government, and the stock jumped about 31%. The Nasdaq 100 rose 6.9% and the S&P 500 4.7%, snapping a seven-day losing streak.",
+   "section": "Markets",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-23/nvidia-reinstates-jensen-huang-as-ceo-with-government-input"
+    },
+    {
+     "name": "Yahoo Finance",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-reinstates-huang-ceo-reversal-014837279.html"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/economy/2026/11/23/nvidia-board-reinstates-jensen-huang-as-ceo"
+    }
+   ]
+  },
+  {
+   "headline": "Iran claims three tankers hit mines in Hormuz as US widens sanctions",
+   "summary": "The IRGC says three US-escorted tankers caught fire after striking mines on Monday; the claim is unverified and CENTCOM had not responded. Washington sanctioned more than two dozen Iranian exchange houses and fronts, and Trump suggested strikes could resume after the new year if talks fail.",
+   "section": "Gulf",
+   "sources": [
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/liveblog/2026/11/24/iran-war-live-iran-says-three-ships-catch-fire-after-hitting-hormuz-mines"
+    },
+    {
+     "name": "Jerusalem Post",
+     "url": "https://www.jpost.com/middle-east/iran-news/article-915899"
+    },
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-23/trump-iran-talks-continue-year-end-republican-party-midterms-middle-east-arab"
+    }
+   ]
+  },
+  {
+   "headline": "Oil slides to an August low as Qatar pushes to revive US-Iran talks",
+   "summary": "Crude fell almost 4% on Monday and WTI slipped below $80 as traders unwound war hedges on signs diplomacy is still alive. Qatar's prime minister met Secretary of State Rubio in Washington to push de-escalation.",
+   "section": "Energy",
+   "sources": [
+    {
+     "name": "Bloomberg",
+     "url": "https://www.bloomberg.com/news/articles/2026-11-23/latest-oil-market-news-and-analysis-for-nov-24"
+    },
+    {
+     "name": "Al Jazeera",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/24/qatar-pm-looks-to-revive-us-iran-talks-after-meeting-rubio"
+    }
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "key": "markets",
+   "name": "Markets & Investing",
+   "stories": [
+    {
+     "headline": "Wall Street posts its best day since April 2025",
+     "body": "The Nasdaq 100 rose 6.86% to 26,746, the S&P 500 4.73% to 7,237 and the Dow 3.01% to 49,595 on Monday after Nvidia rehired Huang. The VIX fell by nearly a quarter, and CoreWeave and Nebius jumped as much as 30%. Nomura's Charlie McElligott called it a 'mechanical bounce' after a seven-day slide that had put the S&P in correction.",
+     "why": "It reverses much of last week's AI-led rout that hit every one of your holdings, but strategists are split on whether it marks a bottom.",
+     "sources": [
+      {
+       "name": "Yahoo Finance",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-reinstates-huang-ceo-reversal-014837279.html"
+      },
+      {
+       "name": "Yahoo Finance live",
+       "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-22/stock-traders-brace-for-more-volatility-after-tech-driven-rout"
+      }
+     ]
+    },
+    {
+     "headline": "Asia follows with a chip-led surge",
+     "body": "Taiwan's index rose about 9% with TSMC and MediaTek up around 10%, Seoul climbed more than 6% and Tokyo about 4% on Tuesday. Japanese government bonds rallied across the curve. A day earlier South Korea's Kospi had closed 3.3% lower on AI-bubble fears.",
+     "why": "Asian chip supply chains are a read-across for Broadcom and AMD demand.",
+     "sources": [
+      {
+       "name": "Yahoo Finance / Euronews",
+       "url": "https://uk.finance.yahoo.com/news/stocks-climb-huangs-return-nvidia-043005341.html"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/japan-stocks-rebound-as-huang-s-return-resuscitates-ai-trade"
+      },
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/news/2026/11/23/south-koreas-stock-market-tumbles-as-ai-bubble-fears-mount"
+      }
+     ]
+    },
+    {
+     "headline": "A December Fed hike is still the base case",
+     "body": "Bond markets price roughly a 92% chance the Fed raises rates at its 9 December meeting, and the 10-year Treasury yield hovered near 4.9-4.95%. Bloomberg notes the sell-off revived the question of a 'Fed put' under Chair Warsh, while Governor Cook warned waiting risks falling behind the curve. Separately, the Fed watchdog is probing whether Governor Bowman broke quiet-period rules.",
+     "why": "Higher rates weigh hardest on richly valued growth stocks like ServiceNow and Shopify.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/newsletters/2026-11-23/us-stock-selloff-revives-question-of-a-fed-put-this-time-under-warsh"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/fed-s-watchdog-probes-whether-bowman-broke-communications-rules"
+      },
+      {
+       "name": "Yahoo Finance live",
+       "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
+      }
+     ]
+    },
+    {
+     "headline": "BoE's Pill argues for another hike; euro-zone activity steady",
+     "body": "Bank of England chief economist Huw Pill said further action is needed to protect inflation credibility. Euro-zone business activity held steady as Germany offset a slump in France. Australian bonds are on their longest winning run since June on bets the RBA will cut.",
+     "why": "Diverging central-bank paths drive FX and global bond flows.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/boe-s-pill-says-action-needed-to-maintain-inflation-credibility"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/euro-zone-activity-holds-steady-as-germany-offsets-french-slump"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/australia-bonds-set-for-longest-rally-since-june-on-rba-cut-bets"
+      }
+     ]
+    },
+    {
+     "headline": "Gold, bitcoin and Brazil's real",
+     "body": "Gold held gains after Monday's rally, though Bloomberg notes 2026 has been a poor year for the metal. Bitcoin failed to hold its Nvidia bump and is down sharply this month. Brazil's Congress approved Lula's fiscal plan after the real weakened past 6 per dollar.",
+     "why": "A gauge of how far risk appetite has really recovered beyond big tech.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/gold-holds-gain-after-nvidia-s-rehiring-of-huang-sparks-rally"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/bitcoin-fails-to-hold-nvidia-bump-with-crypto-headwinds-in-focus"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/lula-fiscal-plan-approved-in-bid-to-calm-market-after-real-tanks"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "energy",
+   "name": "Energy & Commodities",
+   "stories": [
+    {
+     "headline": "Oil at an August low on diplomacy hopes",
+     "body": "Crude fell almost 4% on Monday as hedges built after the weekend escalation were unwound, then held its losses on Tuesday. WTI dropped below $80 for the first time since August, extending a three-week losing streak. Traders are reading the US-Qatar-Iran contacts as a sign talks are still in play.",
+     "why": "Lower oil eases inflation pressure but squeezes Gulf budgets; any Hormuz flare-up could reverse it fast.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-22/latest-oil-market-news-and-analysis-for-nov-23"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/latest-oil-market-news-and-analysis-for-nov-24"
+      },
+      {
+       "name": "Yahoo Finance / Euronews",
+       "url": "https://uk.finance.yahoo.com/news/stocks-climb-huangs-return-nvidia-043005341.html"
+      }
+     ]
+    },
+    {
+     "headline": "European gas surges on a cold snap",
+     "body": "European gas prices jumped as cold weather threatens tight winter supply, with storage well below the seasonal average. That keeps Europe heavily reliant on LNG imports while Qatari cargoes remain constrained by Hormuz.",
+     "why": "Supports LNG prices and Qatar's pricing power, if cargoes can get out.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/european-gas-surges-as-cold-snap-threatens-tight-inventories"
+      }
+     ]
+    },
+    {
+     "headline": "Deals: Var Energi buys Conoco's North Sea assets; Petrobras ups capex",
+     "body": "Var Energi agreed to buy ConocoPhillips' Norway and UK assets for about $2.5bn. Petrobras raised its five-year spending plan 12% to $122bn and took a $470m ethanol stake in Neomille.",
+     "why": "Non-Gulf producers are investing to capture supply share while Hormuz stays disrupted.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/var-energi-agrees-to-buy-conocophillips-assets-in-norway-and-uk"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/petrobras-lifts-spending-to-122-billion-on-oil-and-refining"
+      }
+     ]
+    },
+    {
+     "headline": "Congo bans cobalt exports; copper slips again",
+     "body": "Shares of Chinese cobalt producers jumped after the Democratic Republic of Congo banned exports. Copper resumed its decline on soft Chinese demand and Fed-hike worries, while smelters face a worsening squeeze as fee talks stall.",
+     "why": "Battery-metal supply shocks feed into the energy-transition and chip supply chains.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/shares-in-chinese-cobalt-producers-jump-after-congo-bans-exports"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/copper-resumes-decline-as-investors-look-beyond-drama-at-nvidia"
+      }
+     ]
+    },
+    {
+     "headline": "US Senate probes Vance role in Venezuela oil contract",
+     "body": "Senators are investigating Vice President Vance's role in the choice of Vitol for a Venezuelan oil contract. Separately, US refining's strong run is starting to slow.",
+     "why": "Venezuelan barrels are part of the non-Gulf supply cushion keeping oil prices down.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/us-senate-probes-vance-role-in-vitol-choice-for-venezuela-oil"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/newsletters/2026-11-23/us-oil-refining-s-stellar-run-is-starting-to-slow"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "geopolitics",
+   "name": "Geopolitics",
+   "stories": [
+    {
+     "headline": "Trump signals Iran strikes could resume next year",
+     "body": "Trump suggested military strikes on Iran could restart after the new year if talks fail, as Iran steps up attacks on shipping around Hormuz. Tehran said it would use 'all available means' against the blockade, citing Article 51 of the UN Charter, and repeated that Hormuz could reopen within two days if the US ends hostilities and lifts sanctions.",
+     "why": "Sets a rough deadline for diplomacy that markets and Gulf shipping will watch closely.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/trump-iran-talks-continue-year-end-republican-party-midterms-middle-east-arab"
+      },
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/news/2026/11/23/iran-says-it-will-use-all-available-means-to-counter-us-blockade"
+      }
+     ]
+    },
+    {
+     "headline": "New: Ukraine confirms sinking Russian corvette off Libya with seven sea drones",
+     "body": "Zelenskyy said Ukrainian-made drones sank the corvette Merkury at Benghazi on 22 November and also hit the cargo ship Angara, which he said carried weapons. The UN mission in Libya called for an independent probe, and Moscow warned of a 'dangerous trend' after the Libya and Baltic attacks.",
+     "why": "The war's maritime front is moving into the Mediterranean, raising shipping-risk premia.",
+     "sources": [
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/news/2026/11/23/zelenskyy-says-ukraine-behind-drone-attacks-on-russian-ships-near-libya"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/kyiv-confirms-strike-on-russian-ship-in-libya-as-targets-grow"
+      }
+     ]
+    },
+    {
+     "headline": "EU readies new Russia sanctions; hacked data suggests huge losses",
+     "body": "The EU's new sanctions package targets former Russian fighters. Separately, hacked data puts Russia's death toll in Ukraine near 500,000, Bloomberg reports. Russia's strikes on the Kyiv region killed at least 15 people.",
+     "why": "Signals a long war and no near-term easing of Russian energy sanctions.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/eu-targets-ex-russian-fighters-in-new-sanctions-package"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/new-hacked-data-puts-russian-death-toll-in-ukraine-near-500-000"
+      },
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/news/2026/11/23/death-toll-rises-after-deadly-russian-attacks-on-ukraine"
+      }
+     ]
+    },
+    {
+     "headline": "US blacklists Megaspeed and an Alibaba-owned unit in chip crackdown",
+     "body": "Washington blacklisted Megaspeed, the firm at the centre of the Nvidia scandal, and an Alibaba-owned Singapore subsidiary linked to it. Singapore's prime minister Lawrence Wong said the city-state will not be a conduit for skirting US chip curbs.",
+     "why": "Tighter export controls shape where US chipmakers, including AMD and Broadcom, can sell.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/us-to-blacklist-megaspeed-the-firm-at-center-of-nvidia-scandal"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/us-blacklists-alibaba-owned-company-in-setback-to-ai-ambitions"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/singapore-won-t-be-conduit-to-skirt-us-chip-curbs-wong-says"
+      }
+     ]
+    },
+    {
+     "headline": "Taiwan votes Saturday; Russian jets near South Korea",
+     "body": "Taiwan holds local elections on 28 November, closely watched by Beijing. South Korea scrambled jets and briefly issued an air-raid alert as Russian warplanes neared its airspace.",
+     "why": "Taiwan is the centre of the global chip supply chain your holdings depend on.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/taiwan-local-elections-2026-what-to-know-key-issues-and-why-china-is-watching"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/south-korea-briefly-issues-air-raid-warning-over-russian-plane"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "business",
+   "name": "Business & Tech",
+   "stories": [
+    {
+     "headline": "How Huang got his job back",
+     "body": "Huang had stepped down on 12 November amid reports of extramarital affairs, one involving a Megaspeed executive. The board reversed course unanimously after 'senior levels' of the US government weighed in, and Trump publicly backed the move. Nvidia regained about $950bn in value but remains roughly 23% below its late-October close, and Huang is due before the Senate Banking Committee on 3 December.",
+     "why": "Government involvement in a board decision raises governance questions for the whole AI complex.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/nvidia-s-board-was-no-match-for-trump-or-jensen-huang-s-backers"
+      },
+      {
+       "name": "Yahoo Finance",
+       "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-reinstates-huang-ceo-reversal-014837279.html"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/newsletters/2026-11-23/jensen-huang-s-return-to-nvidia-ramps-up-congressional-probes"
+      }
+     ]
+    },
+    {
+     "headline": "CrowdStrike to buy Zscaler",
+     "body": "CrowdStrike agreed to acquire Zscaler in a deal reported at about $43.9bn; Zscaler shares rose about 13% while CrowdStrike fell nearly 10%. Zscaler's founders stand to receive about $14.5bn.",
+     "why": "The biggest software deal in months, a sign of consolidation in enterprise security.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/zscaler-s-chaudhrys-to-reap-14-5-billion-from-crowdstrike-deal"
+      },
+      {
+       "name": "Yahoo Finance live",
+       "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
+      }
+     ]
+    },
+    {
+     "headline": "Anthropic slips after IPO; OpenAI secrets case",
+     "body": "Anthropic traded slightly lower on Monday, below $88 versus its $83 IPO price, as Bloomberg flags new pressures from public investors. US prosecutors say an OpenAI staffer likely captured secrets using a hidden bug.",
+     "why": "Anthropic's trading is now a public barometer of AI sentiment.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/newsletters/2026-11-23/anthropic-may-find-its-ipo-was-the-easy-part"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/openai-staffer-likely-captured-secrets-on-hidden-bug-us-says"
+      }
+     ]
+    },
+    {
+     "headline": "HPE and Zoom guide light; Capita collapses",
+     "body": "HPE's outlook fell short of the most optimistic estimates and Zoom's revenue forecast missed on stagnant growth. In the UK, Capita shares plunged after its CEO quit over a botched pensions contract.",
+     "why": "Mixed enterprise IT spending signals are relevant to ServiceNow and Microsoft.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/hpe-gives-forecast-that-falls-short-of-most-optimistic-estimates"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/zoom-projects-revenue-that-misses-estimates-on-stagnant-growth"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-23/capita-plunges-57-as-ceo-quits-over-botched-pensions-contract"
+      }
+     ]
+    },
+    {
+     "headline": "Singapore lifts growth forecast to about 6% on AI",
+     "body": "Singapore raised its GDP growth outlook to around 6%, citing the AI boom. Keppel agreed to merge M1 and StarHub in an all-share deal.",
+     "why": "AI capex is still lifting Asian trade economies despite the market wobble.",
+     "sources": [
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/singapore-raises-gdp-growth-outlook-to-around-6-on-ai-boom"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-24/keppel-agrees-to-merge-m1-and-starhub-in-all-share-deal"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "gulf",
+   "name": "Gulf Spotlight",
+   "stories": [
+    {
+     "headline": "Qatar's PM meets Rubio to revive US-Iran talks",
+     "body": "Sheikh Mohammed bin Abdulrahman Al Thani met Secretary of State Rubio in Washington and said Doha is continuing efforts to de-escalate between Iran and the US. Euronews, citing Axios, reports Vice President Vance also met the Qatari PM. No terms or outcomes were disclosed.",
+     "why": "Qatar's mediation is the main channel for any deal that would reopen Hormuz and free its LNG.",
+     "sources": [
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/video/newsfeed/2026/11/24/qatar-pm-looks-to-revive-us-iran-talks-after-meeting-rubio"
+      },
+      {
+       "name": "Yahoo Finance / Euronews",
+       "url": "https://uk.finance.yahoo.com/news/stocks-climb-huangs-return-nvidia-043005341.html"
+      }
+     ]
+    },
+    {
+     "headline": "IRGC says three escorted tankers hit mines",
+     "body": "Iran's Revolutionary Guard said three 'violating' tankers caught fire after hitting mines on Monday despite a US military escort. The claim has not been verified and CENTCOM had not responded; the US has disputed similar Iranian mine claims earlier this month. Attacks reported to UKMTO hit at least 22 in November, after more than 30 in October.",
+     "why": "Keeps Gulf shipping insurance high and LNG flows from Ras Laffan constrained.",
+     "sources": [
+      {
+       "name": "Jerusalem Post",
+       "url": "https://www.jpost.com/middle-east/iran-news/article-915899"
+      },
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/news/liveblog/2026/11/24/iran-war-live-iran-says-three-ships-catch-fire-after-hitting-hormuz-mines"
+      },
+      {
+       "name": "gCaptain",
+       "url": "https://gcaptain.com/u-s-rejects-irans-mine-claim-as-hormuz-shipping-threat-remains-severe/"
+      }
+     ]
+    },
+    {
+     "headline": "US targets Iran's shadow banking network",
+     "body": "The Treasury sanctioned more than two dozen Iranian exchange houses, front companies and staff, including Mellat Exchange, under 'Operation Economic Outcast'. Bessent described the network as the regime's last financial lifeline. Iran's oil exports are near zero.",
+     "why": "Exchange houses often route through Gulf financial centres, so compliance pressure on GCC banks rises.",
+     "sources": [
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/news/2026/11/23/us-escalates-sanctions-on-iran-targets-shadow-banking-networks"
+      }
+     ]
+    },
+    {
+     "headline": "Iran hits US bases and civilian sites after a lull",
+     "body": "Al Jazeera's Inside Story reports Iran struck US bases and civilian sites in the Gulf after a period of relative calm. Iran also showcased a new dual missile launcher and 'missile city'.",
+     "why": "Direct risk to GCC states hosting US forces, including Qatar's Al Udeid.",
+     "sources": [
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/video/inside-story/2026/11/23/iran-hits-us-bases-and-civilian-sites-in-the-gulf-after-a-lull"
+      },
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/news/2026/11/22/iran-unveils-dual-missile-launcher-new-missile-city-what-to-know"
+      }
+     ]
+    },
+    {
+     "headline": "Israel approves return of flydubai flights",
+     "body": "Israel's transport minister approved the return of flydubai flights to Tel Aviv. Meanwhile Bloomberg examines why Saudi Arabia is struggling to defeat the Houthis as the Yemen war reignites.",
+     "why": "Small signs of normalisation sit alongside a hotter Saudi-Houthi front.",
+     "sources": [
+      {
+       "name": "Al Jazeera",
+       "url": "https://www.aljazeera.com/news/2026/11/24/israeli-minister-approves-return-of-flydubai-flights"
+      },
+      {
+       "name": "Bloomberg",
+       "url": "https://www.bloomberg.com/news/articles/2026-11-20/why-are-the-houthis-so-hard-for-saudi-arabia-to-defeat"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "portfolio": {
+  "name": "My Portfolio",
+  "stories": [
+   {
+    "tickers": [
+     "AVGO",
+     "NOW",
+     "SPUS",
+     "SHOP",
+     "MSFT",
+     "AMD",
+     "GOOG"
+    ],
+    "headline": "The whole portfolio gets a relief rally",
+    "body": "Monday's 6.9% jump in the Nasdaq 100 lifted all the AI and software names that sank last week. SPUS, heavy in big US tech, should track much of that move. Volatility remains high and a Fed hike on 9 December is still priced in.",
+    "why": "Your seven holdings move largely as one trade, so both the rout and the rebound hit you in full.",
+    "sources": [
+     {
+      "name": "Yahoo Finance",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-reinstates-huang-ceo-reversal-014837279.html"
+     },
+     {
+      "name": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/why-nvidia-ceo-jensen-huang-matters-so-much-to-the-stock-market"
+     }
+    ]
+   },
+   {
+    "tickers": [
+     "AVGO",
+     "AMD"
+    ],
+    "headline": "Broadcom and AMD bounce with the chip sector",
+    "body": "Broadcom and AMD each rose about 4% on Monday after double-digit losses the prior week, per Yahoo Finance's live coverage, as Huang's return revived the AI chip trade. AMD had fallen sharply on 19 November on a China firmware report. The new US blacklisting of Megaspeed and an Alibaba unit tightens the export-control backdrop for both.",
+    "why": "Chip stocks are the most sensitive part of your portfolio to the Nvidia story and China rules.",
+    "sources": [
+     {
+      "name": "Yahoo Finance live",
+      "url": "https://finance.yahoo.com/markets/live/stock-market-today-monday-november-23-dow-sp-500-nasdaq-nvidia-reinstates-jensen-huang-141511975.html"
+     },
+     {
+      "name": "Bloomberg",
+      "url": "https://www.bloomberg.com/news/articles/2026-11-23/us-to-blacklist-megaspeed-the-firm-at-center-of-nvidia-scandal"
+     }
+    ]
+   },
+   {
+    "tickers": [
+     "GOOG"
+    ],
+    "headline": "Alphabet jumps nearly 6%",
+    "body": "Alphabet's class A shares closed at $281.08 on 23 November, up 5.95%, with no company-specific catalyst cited beyond renewed AI sentiment. GOOG class C shares typically move in step.",
+    "why": "Recovers part of the slide since Alphabet's post-earnings drop in late October.",
+    "sources": [
+     {
+      "name": "JKN",
+      "url": "https://news.jkn.co.kr/editions/english/post/1117465"
+     }
+    ]
+   },
+   {
+    "tickers": [
+     "NOW"
+    ],
+    "headline": "ServiceNow up about 5%",
+    "body": "ServiceNow rose about 4.8% on Monday, according to MarketBeat, as software rebounded alongside chips. It is still recovering from its steep post-earnings drop in October.",
+    "why": "Software names have lagged chips in the AI trade; Monday's move was a broad relief rally, not company news.",
+    "sources": [
+     {
+      "name": "MarketBeat",
+      "url": "https://www.marketbeat.com/instant-alerts/price-servicenow-nyse-now-stock-price-up-48-heres-what-happened-2026-11-23/"
+     }
+    ]
+   },
+   {
+    "tickers": [
+     "MSFT"
+    ],
+    "headline": "Microsoft lags with a modest gain",
+    "body": "Microsoft rose about 1.6% on Monday per MarketBeat, trailing the Nasdaq's rebound. No new company-specific news; it is still digesting last week's Nvidia-Anthropic partnership on Azure. Shopify likewise had no material news.",
+    "why": "Microsoft's smaller swing on both the way down and up reflects its more defensive profile among your holdings.",
+    "sources": [
+     {
+      "name": "MarketBeat",
+      "url": "https://www.marketbeat.com/instant-alerts/price-microsoft-nasdaq-msft-stock-price-up-16-whats-next-2026-11-23/"
+     }
+    ]
+   }
+  ]
+ },
+ "watch": [
+  {
+   "when": "Thu 26 Nov",
+   "what": "US Thanksgiving: Wall Street closed, half-day Friday."
+  },
+  {
+   "when": "Sat 28 Nov",
+   "what": "Taiwan local elections, watched by Beijing."
+  },
+  {
+   "when": "Thu 3 Dec",
+   "what": "Jensen Huang testifies before the Senate Banking Committee."
+  },
+  {
+   "when": "Wed 9 Dec",
+   "what": "Fed rate decision (hike ~90% priced) and Broadcom (AVGO) fiscal Q4 earnings."
+  },
+  {
+   "when": "Ongoing",
+   "what": "Qatar-brokered US-Iran contacts; any move on Hormuz reopening."
+  }
+ ]
+}
